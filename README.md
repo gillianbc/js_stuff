@@ -7,3 +7,6 @@ for (var key in p) {
         console.log(key + " -> " + p[key]);
     }
 }
+
+# Avoid Callback Hell in Mongoose
+http://www.summa.com/blog/avoiding-callback-hell-while-using-mongoose
