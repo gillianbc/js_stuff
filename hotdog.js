@@ -1,5 +1,5 @@
 function getHotDog () {
-    return getBun()
+    var str = getBun()
     .then(function (bun) {
         // console.log(bun);
         return addSausage(bun);
@@ -11,7 +11,10 @@ function getHotDog () {
     .then(function (hotdog) {
         // console.log(hotdog);
         return hotdog;
-    })
+    }).catch((err)=>{
+        console.log(err);
+    });
+    return str;
 };
 
 function getBun(){
