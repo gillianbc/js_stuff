@@ -1,7 +1,7 @@
 # stuff
 Temp stuff, snippets
 
-# Note to self:
+# Iterating Through Javascript Object
 for (var key in p) {
     if (p.hasOwnProperty(key)) {
         console.log(key + " -> " + p[key]);
