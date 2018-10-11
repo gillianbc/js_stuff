@@ -34,5 +34,5 @@ function addSauce(food){
 };
 
 var snack = '';
-await getHotDog().then(dog => snack = dog);
+await getHotDog().then(hotDog => snack = hotDog);
 console.log(snack);
