@@ -33,5 +33,6 @@ function addSauce(food){
     });
 };
 
-var snack = getHotDog();
+var snack = '';
+await getHotDog().then(dog => snack = dog);
 console.log(snack);
