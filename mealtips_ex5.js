@@ -1,25 +1,29 @@
-var bills = [124, 48, 268];
-
-
-
-function calcTip(mealprice){
-    var tiprate = [20,15,10];
-    var tiplimits = [50,200];
-
-    switch (true) {
-        case mealprice < tiplimits[0]:
-            return mealprice * tiprate[0] / 100;
-        case mealprice < tiplimits[1]:
-            return mealprice * tiprate[1] / 100;
-        default:
-            return mealprice * tiprate[2] / 100;
+var bills = {
+    mealprices: [124, 48, 268, 180, 42],
+    calcTips: function(){
+        var tiprate = [20,15,10];
+        var tiplimits = [50,200];
+        this.tips = [];
+        this.finalprices = [];
+        var rate = 0;
+        for (let i = 0; i < this.mealprices.length; i++) {
+            const mealprice = this.mealprices[i];
+            switch (true) {
+                case mealprice < tiplimits[0]:
+                    rate = tiprate[0];
+                case mealprice < tiplimits[1]:
+                    rate = tiprate[1];
+                default:
+                    rate = tiprate[2];
+            }
+            this.tips[i] = mealprice * rate / 100;
+            this.finalprices[i] = this.tips[i] + mealprice;
+        };   
     }
+        
 };
-function addTip(mealprice){
-    return mealprice + calcTip(mealprice);
-}
-var tips, finalprice = [];
-tips = bills.map(calcTip);
-finalprice = bills.map(addTip);
-console.log(tips);
-console.log(finalprice);
+
+bills.calcTips();
+
+console.log(bills);
+
