@@ -8,5 +8,8 @@
     "start" : "node allpromises"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-gyp": "^3.8.0"
+  }
 }
