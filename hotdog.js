@@ -45,5 +45,5 @@ function addSauce(food){
 
 var snack = '';
 await getHotDog().then(hotDog => snack = hotDog);
-console.log(snack);
+console.log('My snack ' + snack);
 
