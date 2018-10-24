@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["mystuff","bar"],"mappings":"AAAA,OAAOA,OAAP,MAAoB,qBAApB;AACAA,OAAO,CAACC,GAAR","sourcesContent":["import mystuff from './myfuncs/banana.js';\r\nmystuff.bar();"],"file":"index.js"}
