@@ -44,6 +44,6 @@ function addSauce(food){
 };
 
 var snack = '';
-await getHotDog().then(hotDog => snack = hotDog);
+getHotDog().then(hotDog => snack = hotDog);
 console.log('My snack ' + snack);
 
